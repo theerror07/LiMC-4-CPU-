@@ -1,0 +1,1 @@
+Due to the simplicity of the input sequencer and start stop, they have been combined to form the control unit (CU)

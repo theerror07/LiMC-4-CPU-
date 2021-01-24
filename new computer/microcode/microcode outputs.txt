@@ -1,0 +1,50 @@
+ALU:
+register X latch
+register Y latch
+ALU F0 set
+ALU F1 set
+ALU F2 set
+ALU F3 set
+Acc latch
+Acc output set
+Flag Generate output set
+
+FLAGS:
+Flag Latch
+Flag Output set
+Check X>Y 
+Check X<Y
+Check X=Y
+Check Overflow
+Check Underflow
+
+REGISTERS:
+X jsr latch
+X jsr output set
+Y jsr latch
+Y jsr output set
+flag jsr latch
+flag jsr output
+PC jsr latch
+PC jsr output set
+
+PC:
+PC1 latch
+PC2 latch
+PC1 active
+PC2 active
+PC1 to databus set
+
+IO BUFFER:
+databus to ram set
+IO buffer to internal databus set
+microcode latch
+microcode ram read set
+ram write 
+
+MISC:
+all latch reset
+done
+Stop
+
+

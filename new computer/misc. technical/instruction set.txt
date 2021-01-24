@@ -1,0 +1,80 @@
+INSTRUCTIONS: 20 total
+
+
+00000 LDX; load ram value to X
+00001 STX; load X to ram address
+00010 LDY; load ram value to Y
+00011 STY; load Y to ram address
+00100 LVX; load a value (0-15) into X
+00101 LVY; load a value (0-15) into Y
+
+00110 INX; incrament X
+00111 DEX; decrament X
+
+01000 CMP; sets all flags accordingly
+
+01001 JMP; jump to ram address
+01010 JXL; jump if X > Y
+01011 JYL; jump if X < Y
+01100 JEQ; jump if X = Y
+01101 JNE; jump if X != Y
+01110 JOF; jump if X = 10 overflow
+01111 JUF; jump if X = 15 underflow
+
+10000 JSR; jump to sub label
+10001 RSR; return from sub (no label)
+
+10010 NOP; do nothing
+10011 BRK; halt the CPU
+
+
+
+DATA AND ADDRESS SIZE:
+-------- --------
+AAAAAAAA AAAIIIII
+       D DDD
+A9876543 21043210
+
+
+
+FORMATS:
+LXD/LDY/STX/STY
+******** ***IIIII
+* = Address
+I = Instruction
+
+LVX/LVY
+-------* ***IIIII
+* = Value 
+I = Instruction
+- = NA
+
+INX/DEX
+-------- ---IIIII
+I = Instruction
+- = NA
+
+JMP/JXL/JYL/JEQ/JNE/JOF/JUF
+******** ***IIIII
+* = Address
+I = Instruction
+
+CMP
+-------- ---IIIII
+I = Instruction
+- = NA
+
+JSR
+******** ***IIIII
+* = Address
+I = Instruction
+
+RSR
+-------- ---IIIII
+I = Instruction
+- = NA
+
+NOP/BRK
+-------- ---IIIII
+I = Instruction
+- = NA
